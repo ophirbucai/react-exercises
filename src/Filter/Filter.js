@@ -21,9 +21,9 @@ function Filter() {
 			<p>Filter the list as you type.</p>
 			<input placeholder="Search..." className="Filter__textbox" onChange={filterItems} />
 			<ul>
-				{filteredItems.map((item, index) => {
+				{filteredItems.length > 0 ? filteredItems.map((item, index) => {
 					return <li key={index}>{item}</li>;
-				})}
+				}) : <li className="Filter__no_results">No results found!</li>}
 			</ul>
 		</div>
 	)
