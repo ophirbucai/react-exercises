@@ -1,0 +1,25 @@
+.Remover h3 {
+  margin: 0;
+}
+
+.Remover__list {
+  height: 100px;
+}
+
+.Remover__list li {
+  color: #555555;
+  line-height: 1.5em;
+}
+
+.Remover__list span {
+  font-family: "Avenir Next";
+  font-weight: bold;
+  color: indianred;
+  border-radius: 5px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.Remover__reset {
+  text-align: center;
+}

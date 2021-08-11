@@ -1,0 +1,23 @@
+.Timer h3 {
+  margin: 0;
+}
+
+.Timer__explanation {
+  padding-left: 20px;
+}
+
+.Timer__actions {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.Timer__actions button {
+  margin: 0 5px;
+}
+
+.Timer__value {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}

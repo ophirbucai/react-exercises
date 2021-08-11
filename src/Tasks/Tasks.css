@@ -1,0 +1,17 @@
+.Tasks h3 {
+  margin-top: 0;
+}
+
+.Tasks ul, .Tasks ol {
+  list-style: none;
+  padding: 0;
+}
+
+.Tasks li {
+  color: #444444;
+  background: #eeeeee;
+  border-left: 3px solid #4a84ba;
+  padding: 3px 7px;
+  margin: 3px 0;
+}
+

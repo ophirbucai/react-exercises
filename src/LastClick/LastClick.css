@@ -1,0 +1,28 @@
+.LastClick__buttons {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.LastClick__buttons button {
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 0 5px;
+  outline: none;
+}
+
+.LastClick__box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 70px;
+  height: 45px;
+  margin: 15px auto;
+  font-size: 20px;
+  color: #4b5155;
+  padding: 8px;
+  border: 2px solid #cccccc;
+  border-radius: 3px;
+  background-color: #eeeeee;
+}

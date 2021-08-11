@@ -1,0 +1,15 @@
+.SmartParagraph__explanation {
+  margin-top: 0;
+}
+
+.SmartParagraph__value {
+  font-size: 14px;
+  color: #555555;
+  font-family: Avenir, Arial;
+}
+
+.SmartParagraph__value span {
+  padding: 5px;
+  color: dodgerblue;
+  cursor: pointer;
+}

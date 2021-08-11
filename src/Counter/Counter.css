@@ -1,0 +1,9 @@
+.Counter {
+  text-align: center;
+}
+
+.Counter__value {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+}

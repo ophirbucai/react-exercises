@@ -1,0 +1,11 @@
+.Filter p {
+  margin-top: 0;
+}
+
+.Filter__textbox {
+  font-size: 16px;
+}
+
+.Filter ul li {
+  line-height: 1.4em;
+}
