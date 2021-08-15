@@ -12,11 +12,11 @@ function Weather() {
 	}, [])
 
 	const hottestDay = useMemo(() => {
-		return weatherData.reduce((day, hottestDay) => day.temperature > hottestDay.temperature ? day : hottestDay, {});
+		return weatherData.reduce((hottestDay, day) => hottestDay.temperature > day.temperature ? hottestDay : day, {});
 	}, [weatherData]);
 
 	const coldestDay = useMemo(() => {
-		return weatherData.reduce((day, coldestDay) => day.temperature < coldestDay.temperature ? day : coldestDay, {});
+		return weatherData.reduce((coldestDay, day) => coldestDay.temperature < day.temperature ? coldestDay : day, {});
 	}, [weatherData]);
 
 	return (
