@@ -14,6 +14,7 @@ function Tasks() {
 		}
 		setTasks([...tasks, task]);
 		setTask('');
+		e.target.children[0].focus();
 	}
 	return (
 		<div className="Tasks">
