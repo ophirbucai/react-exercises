@@ -16,3 +16,7 @@
   margin-top: 10px;
   color: #4a84ba;
 }
+
+img {
+  transition: box-shadow 120ms ease;
+}

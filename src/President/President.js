@@ -30,6 +30,7 @@ function President() {
 						key={index}
 						src={require('./images/' + president.image).default}
 						onClick={() => setSelectedName(presidents[index])}
+						style={selectedName && selectedName.image === president.image ? {boxShadow: "0 0 0 3px #34a853"} : { }}
 						alt=""
 					/>
 				})}
