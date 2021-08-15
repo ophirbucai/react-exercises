@@ -11,11 +11,7 @@ function Remover() {
 	]);
 
 	const removeStudent = (key) => {
-		let tempStudents = [...students]; // O(n) duplicate the students array
-		tempStudents[key] = tempStudents[tempStudents.length - 1]; // O(1)
-		tempStudents.length--; // O(1)
-		setStudents(tempStudents); // O(1)
-		// setStudents(students.filter((student, index) => index !== key));
+		setStudents(students.filter((s, index) => index !== key));
 	}
 
 	return (

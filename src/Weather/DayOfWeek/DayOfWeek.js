@@ -1,7 +1,8 @@
 import React from 'react';
 
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
 function DayOfWeek({day}) {
-    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     return (
         <span>{daysOfWeek[day]}</span>

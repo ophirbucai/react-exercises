@@ -1,11 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useMemo, useEffect, useState} from 'react';
 import './Weather.css';
 import DayOfWeek from "./DayOfWeek/DayOfWeek";
 
 function Weather() {
 	const [weatherData, setWeatherData] = useState([]);
-	const [hottestDay, setHottestDay] = useState({});
-	const [coldestDay, setColdestDay] = useState({});
 
 	useEffect(() => {
 		fetch('https://netcraft2.s3-eu-west-1.amazonaws.com/weather.json')
@@ -13,10 +11,13 @@ function Weather() {
 			.then(data => setWeatherData(data));
 	}, [])
 
-	useEffect(() => {
-		setHottestDay(weatherData.reduce((day, hottestDay) => day.temperature > hottestDay.temperature ? day : hottestDay, {}));
-		setColdestDay(weatherData.reduce((day, coldestDay) => day.temperature < coldestDay.temperature ? day : coldestDay, {}));
-	}, [weatherData])
+	const hottestDay = useMemo(() => {
+		return weatherData.reduce((day, hottestDay) => day.temperature > hottestDay.temperature ? day : hottestDay, {});
+	}, [weatherData]);
+
+	const coldestDay = useMemo(() => {
+		return weatherData.reduce((day, coldestDay) => day.temperature < coldestDay.temperature ? day : coldestDay, {});
+	}, [weatherData]);
 
 	return (
 		<div className="Weather">
