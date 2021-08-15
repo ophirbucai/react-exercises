@@ -10,9 +10,7 @@ function Remover() {
 		'Rose Tobernak'
 	]);
 
-	const removeStudent = (key) => {
-		setStudents(students.filter((s, index) => index !== key));
-	}
+	const removeStudent = key => setStudents(students.filter((s, index) => key !== index));
 
 	return (
 		<div className="Remover">
