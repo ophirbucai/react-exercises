@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './President.css';
+const { isEqual } = require('lodash');
 
 function President() {
 	const [selectedName, setSelectedName] = useState();
@@ -30,7 +31,7 @@ function President() {
 						key={index}
 						src={require('./images/' + president.image).default}
 						onClick={() => setSelectedName(presidents[index])}
-						style={selectedName && selectedName.image === president.image ? {boxShadow: "0 0 0 3px #34a853"} : { }}
+						style={selectedName && isEqual(president, selectedName) ? {boxShadow: "0 0 0 3px #34a853"} : {}}
 						alt=""
 					/>
 				})}
