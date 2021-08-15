@@ -14,9 +14,9 @@ function Weather() {
 	}, [])
 
 	useEffect(() => {
-		setHottestDay(weatherData.reduce((day, acc) => day.temperature > acc.temperature ? day : acc, {}));
-		setColdestDay(weatherData.reduce((day, acc) => day.temperature < acc.temperature ? day : acc, {}));
-	}, [weatherData, setWeatherData])
+		setHottestDay(weatherData.reduce((day, hottestDay) => day.temperature > hottestDay.temperature ? day : hottestDay, {}));
+		setColdestDay(weatherData.reduce((day, coldestDay) => day.temperature < coldestDay.temperature ? day : coldestDay, {}));
+	}, [weatherData])
 
 	return (
 		<div className="Weather">
