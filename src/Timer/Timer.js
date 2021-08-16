@@ -7,22 +7,18 @@ function Timer() {
 	const [isStarted, setIsStarted] = useState(false);
 	const [secondsElapsed, setSecondsElapsed] = useState(0);
 
-	const stopCounting = useCallback(() => {
+	const pauseTimer = useCallback(() => {
 		clearInterval(timerFunction.current);
 		timerFunction.current = null;
 		setIsStarted(false);
 	}, []);
 
-	const pauseHandler = useCallback(() => {
-		stopCounting();
-	}, [stopCounting]);
-
-	const stopHandler = useCallback(() => {
-		stopCounting();
+	const resetTimer = useCallback(() => {
+		pauseTimer();
 		setSecondsElapsed(0);
-	}, [stopCounting]);
+	}, [pauseTimer]);
 
-	const startHandler = useCallback(() => {
+	const startTimer = useCallback(() => {
 		setIsStarted(true);
 	}, []);
 
@@ -47,9 +43,9 @@ function Timer() {
 				<li><b>Reset:</b> should set the timer to 0</li>
 			</ul>
 			<div className="Timer__actions">
-				{!isStarted ? <button onClick={startHandler}>{secondsElapsed === 0 ? "Play" : "Resume"}</button>
-							: <button onClick={pauseHandler}>Pause</button>}
-				<button onClick={stopHandler}>Reset</button>
+				{!isStarted ? <button onClick={startTimer}>{secondsElapsed === 0 ? "Play" : "Resume"}</button>
+							: <button onClick={pauseTimer}>Pause</button>}
+				<button onClick={resetTimer}>Reset</button>
 			</div>
 			<TimerValue secondsElapsed={secondsElapsed} />
 		</div>
